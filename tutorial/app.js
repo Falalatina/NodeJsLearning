@@ -1,11 +1,12 @@
-console.log(__dirname);
+// Modules
 
-setInterval(() => {
-  console.log("hi");
-}, 1000);
+const john = "john";
+const peta = "peta";
 
-// __dirname - path
-// __filename -filename
-// require - func to use module
-// module - file
-// process - info bout env
+const sayHi = (name) => {
+  console.log(`Hello ${name}`);
+};
+
+sayHi("susan");
+sayHi(john);
+sayHi(peta);
