@@ -6,4 +6,4 @@ const peter = "peter";
 
 module.exports = { john, peter };
 
-console.log(module);
+//console.log(module);
