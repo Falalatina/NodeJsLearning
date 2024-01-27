@@ -7,5 +7,5 @@ console.log(first, second);
 
 writeFileSync(
   "./content/result-sync.txt",
-  `here is the result ${first} \n and ${second}`
+  `here is the result ${first} \n and ${second} `
 );
