@@ -1,9 +1,7 @@
-const http = require("http");
+///streams
 
-const server = http.createServer();
+const { writeFileSync } = require("fs");
 
-server.on("request", (req, res) => {
-  res.end("Jolll");
-});
-
-server.listen(5000);
+for (let i = 0; i < 1000; i++) {
+  writeFileSync("./content/big.txt", ` hello world ${i} \n`, { flag: "a" });
+}
