@@ -13,11 +13,11 @@ const app = express();
 //app.listen
 
 app.get("/", (req, res) => {
-  res.send("HOM");
+  res.status(200).send("HOM");
 });
 
 app.get("/about", (req, res) => {
-  res.send("about");
+  res.status(200).send("about");
 });
 
 app.all("*", (req, res) => {
