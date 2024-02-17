@@ -3,6 +3,9 @@ const { readFileSync } = require("fs");
 
 // get a file
 const navbar = readFileSync("./navbar-app/index.html");
+const styles = readFileSync("./navbar-app/styles.css");
+const img = readFileSync("./navbar-app/logo.svg");
+const logic = readFileSync("./navbar-app/browser-app.js");
 
 const server = http.createServer((req, res) => {
   //console.log(req.method);
