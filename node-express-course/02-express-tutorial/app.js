@@ -7,7 +7,9 @@ app.get("/api/products", (req, res) => {
 });
 
 app.get("/", (req, res) => {
-  res.status(200).send("<h1>Home Page</h1>");
+  res
+    .status(200)
+    .send("<h1>Home Page</h1> <a href='/api/products'>products</a>");
 });
 
 app.all("*", (req, res) => {
