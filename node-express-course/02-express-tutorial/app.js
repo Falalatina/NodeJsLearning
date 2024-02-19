@@ -2,8 +2,12 @@ const express = require("express");
 const app = express();
 const { products } = require("./data");
 
-app.get("/", (req, res) => {
+app.get("/api/products", (req, res) => {
   res.json(products);
+});
+
+app.get("/", (req, res) => {
+  res.status(200).send("<h1>Home Page</h1>");
 });
 
 app.all("*", (req, res) => {
