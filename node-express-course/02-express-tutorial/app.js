@@ -3,7 +3,11 @@ const app = express();
 const { products } = require("./data");
 
 app.get("/api/products", (req, res) => {
-  res.json(products);
+  const newProducts = products.map((product) => {
+    const { id, name, image } = product;
+    return { id, name, image };
+  });
+  res.json(newProducts);
 });
 
 app.get("/", (req, res) => {
