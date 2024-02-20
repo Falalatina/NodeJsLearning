@@ -21,6 +21,9 @@ app.get("/api/products/:productID", (req, res) => {
   res.json(singleProduct);
 });
 
+app.get("/api/products/:productID/reviews/:reviewID", (req, res) => {
+  res.send("hi");
+});
 app.get("/", (req, res) => {
   res
     .status(200)
