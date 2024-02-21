@@ -30,6 +30,11 @@ app.get("/", (req, res) => {
     .send("<h1>Home Page</h1> <a href='/api/products'>products</a>");
 });
 
+app.get("/api/v1/query", (req, res) => {
+  console.log(req.query);
+  res.send("Hellooooo");
+});
+
 app.all("*", (req, res) => {
   res.status(404).send("404 not found");
 });
