@@ -7,6 +7,8 @@ const logger = (req, res, next) => {
   const url = req.url;
   const time = new Date().getFullYear();
   console.log(method, url, time);
+  // res.send('sth sth')
+  next();
 };
 
 app.get("/", logger, (req, res) => {
