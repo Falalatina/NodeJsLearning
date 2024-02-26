@@ -5,9 +5,12 @@ const logger = require("./logger");
 const authorize = require("./authorize");
 // req => middleware => res
 
-app.use([authorize, logger]);
+//app.use([authorize, logger]);
 // app.use('/api', logger)
 //odnienie się nested badziewia po api
+
+app.use(express.static("./public"));
+
 app.get("/", (req, res) => {
   res.send("Home");
 });
@@ -20,7 +23,8 @@ app.get("/api/products", (req, res) => {
   res.send("Products");
 });
 
-app.get("/api/items", (req, res) => {
+app.get("/api/items", [authorize, logger], (req, res) => {
+  console.log(req.user.id);
   res.send("Items");
 });
 
