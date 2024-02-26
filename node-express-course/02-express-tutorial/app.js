@@ -5,7 +5,7 @@ const logger = require("./logger");
 const authorize = require("./authorize");
 // req => middleware => res
 
-app.use(logger);
+app.use([authorize, logger]);
 // app.use('/api', logger)
 //odnienie się nested badziewia po api
 app.get("/", (req, res) => {
